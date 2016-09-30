@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!-- default view - shows available dates and hours for customer reservations -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Reservation</title>
+
+
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <form th:action="@{/reservation}" method="POST">
+
+            <div class="container">
+                <div class="jumbotron" style="background-color: #337AB7; color: white; text-align: center ">
+                    <h1>Reservations</h1>
+                    <div style="color: #ffff00">
+                        <p>Today is
+                            <strong th:text="${today}"></strong>
+                            week
+                            <strong th:text= "${thisWeek}"></strong></p>
+                    </div>
+
+                    <h4>Hello <span th:text="${name}"></span>!</h4>
+                    <p>Choose suitable free times and click RESERVE.</p>
+
+                    <div class="btn-group-horizontal">
+                        <a href="/personal" class="btn btn-default btn-lg">Personal Info</a>
+                        <input type="button" class="btn btn-link btn-lg disabled"></input>
+                        <a href="/login?logout" class="btn btn-warning btn-lg">Logout</a>
+                        <input type="button" class="btn btn-link btn-lg disabled"></input>
+                        <a href="/reset" class="btn btn-danger btn-lg" type="reset">Reset</a>
+                        <input type="button" class="btn btn-link btn-lg disabled"></input>
+                        <input class="btn btn-success btn-lg" type="submit" value="Reserve"></input>
+                    </div>
+                </div>
+            </div>
+
+            <center>
+                <div class="container" aria-pressed="false">
+
+                    <a href="/back" class="btn btn-info btn-lg">
+                        <span class="glyphicon glyphicon-arrow-left"></span> Back
+                    </a>
+
+                    <!-- for spacing purposes only-->
+                    <div class="btn-group-vertical">
+                        <input type="button" class="btn btn-link btn-lg disabled"></input>
+                    </div>
+
+                    <div class="btn-group-vertical">
+
+                        <h4 th:text="${dateOnMonday}"></h4> 
+
+                        <label class="btn btn-primary btn-lg"> 
+                            <input type="checkbox" name="times" value="08:00-09:00 Monday"> 8:00-9:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="09:00-10:00 Monday"> 9:00-10:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="10:00-11:00 Monday"> 10:00-11:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="11:00-12:00 Monday"> 11:00-12:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="12:00-13:00 Monday"> 12:00-13:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="13:00-14:00 Monday"> 13:00-14:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="14:00-15:00 Monday"> 14:00-15:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="15:00-16:00 Monday"> 15:00-16:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="16:00-17:00 Monday"> 16:00-17:00</input>
+                        </label>
+                    </div>
+
+                    <div class="btn-group-vertical">
+
+                        <h4 th:text="${dateOnThuesday}"></h4>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="08:00-09:00 Thuesday"> 8:00-9:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="09:00-10:00 Thuesday"> 9:00-10:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="10:00-11:00 Thuesday"> 10:00-11:00 </input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="11:00-12:00 Thuesday"> 11:00-12:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="12:00-13:00 Thuesday"> 12:00-13:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="13:00-14:00 Thuesday"> 13:00-14:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="14:00-15:00 Thuesday"> 14:00-15:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="15:00-16:00 Thuesday"> 15:00-16:00</input>
+                        </label>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="16:00-17:00 Thuesday"> 16:00-17:00</input>
+                        </label>
+                    </div>
+
+                    <div class="btn-group-vertical">
+
+                        <h4 th:text="${dateOnWednesday}"></h4>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name= "times" value="08:00-09:00 Wednesday"> 8:00-9:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="09:00-10:00 Wednesday"> 9:00-10:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="10:00-11:00 Wednesday"> 10:00-11:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="11:00-12:00 Wednesday"> 11:00-12:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="12:00-13:00 Wednesday"> 12:00-13:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="13:00-14:00 Wednesday"> 13:00-14:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="14:00-15:00 Wednesday"> 14:00-15:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="15:00-16:00 Wednesday"> 15:00-16:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="16:00-17:00 Wednesday"> 16:00-17:00</input>
+                        </label>
+                    </div>
+
+                    <div class="btn-group-vertical">
+
+                        <h4 th:text="${dateOnThursday}"></h4>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="08:00-09:00 Thursday"> 8:00-9:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="09:00-10:00 Thursday"> 9:00-10:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="10:00-11:00 Thursday"> 10:00-11:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="11:00-12:00 Thursday"> 11:00-12:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="12:00-13:00 Thursday"> 12:00-13:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="13:00-14:00 Thursday"> 13:00-14:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="14:00-15:00 Thursday"> 14:00-15:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="15:00-16:00 Thursday"> 15:00-16:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="16:00-17:00 Thursday"> 16:00-17:00</input>
+                        </label>
+                    </div>
+
+                    <div class="btn-group-vertical">
+
+                        <h4 th:text="${dateOnFriday}"></h4>
+
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="08:00-09:00 Friday"> 8:00-9:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="09:00-10:00 Friday"> 9:00-10:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="10:00-11:00 Friday"> 10:00-11:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="11:00-12:00 Friday"> 11:00-12:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="12:00-13:00 Friday"> 12:00-13:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="13:00-14:00 Friday"> 13:00-14:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="14:00-15:00 Friday"> 14:00-15:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="15:00-16:00 Friday"> 15:00-16:00</input>
+                        </label>
+                        <label class="btn btn-primary btn-lg">
+                            <input type="checkbox" name="times" value="16:00-17:00 Friday"> 16:00-17:00</input>
+                        </label>
+                    </div>
+
+                    <!-- for spacing purposes only-->
+                    <div class="btn-group-vertical">
+                        <input type="button" class="btn btn-link btn-lg disabled"></input>
+                    </div>
+
+                    <a href="/next" class="btn btn-info btn-lg">
+                        <span class="glyphicon glyphicon-arrow-right"></span> Next
+                    </a>
+                </div>
+            </center>
+        </form>
+    </body>
+</html>

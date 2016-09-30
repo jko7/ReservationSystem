@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: res.controller.ReservationControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 2, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in res.controller.ReservationControllerTest
+testGiveAllReservations(res.controller.ReservationControllerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at res.controller.ReservationController.giveAllReservations(ReservationController.java:127)
+	at res.controller.ReservationControllerTest.testGiveAllReservations(ReservationControllerTest.java:108)
+
+testConfirmReservations(res.controller.ReservationControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]> but was:<[redirect:/default]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at res.controller.ReservationControllerTest.testConfirmReservations(ReservationControllerTest.java:81)
+
+testShowReservation(res.controller.ReservationControllerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at res.controller.ReservationController.showReservation(ReservationController.java:44)
+	at res.controller.ReservationControllerTest.testShowReservation(ReservationControllerTest.java:51)
+
+testCancelReservations(res.controller.ReservationControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]> but was:<[redirect:/default]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at res.controller.ReservationControllerTest.testCancelReservations(ReservationControllerTest.java:95)
+
+testAddReservation(res.controller.ReservationControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]> but was:<[redirect:/default]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at res.controller.ReservationControllerTest.testAddReservation(ReservationControllerTest.java:67)
+

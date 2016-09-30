@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: res.controller.RegistrationControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in res.controller.RegistrationControllerTest
+testView(res.controller.RegistrationControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]> but was:<[form]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at res.controller.RegistrationControllerTest.testView(RegistrationControllerTest.java:44)
+
+testRegister(res.controller.RegistrationControllerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at res.controller.RegistrationController.register(RegistrationController.java:42)
+	at res.controller.RegistrationControllerTest.testRegister(RegistrationControllerTest.java:59)
+
+testShowPersonalInfo(res.controller.RegistrationControllerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at res.controller.RegistrationController.showPersonalInfo(RegistrationController.java:53)
+	at res.controller.RegistrationControllerTest.testShowPersonalInfo(RegistrationControllerTest.java:75)
+

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<!-- view for showing registration information -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Account details and current reservations</title>
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    </head>
+    <body>
+
+        <h2> Account details: </h2>
+
+        <div th:each="info : ${account}">
+            <p>Name: <span th:text="${info.name}">name</span></p>
+            <p>Username: <span th:text="${info.username}">username</span></p>
+            <p>Email: <span th:text="${info.email}">email</span></p>
+        </div>
+
+        <a href="/start" class="btn btn-info btn-lg">Log in and start making reservations</a>
+
+    </body>
+</html>

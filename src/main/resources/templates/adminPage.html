@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<!-- view to show admin functions -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Administrative options</title>
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+
+
+        <h2>Hello admin! Ready to change the world?</h2>
+
+        <a href="/login?logout" class="btn btn-warning btn-lg">Logout</a>
+        <a href="/default" class="btn btn-success btn-lg">Back to selections</a>
+        <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#MessageModal">Delete users and reservations</button>
+
+        <h3> Users:</h3>
+
+        <ul>
+            <li th:each="info : ${accounts}">
+                <p>Name: <span th:text="${info.name}">name</span></p>
+                <p>Username: <span th:text="${info.username}">username</span></p>
+                <p>Email: <span th:text="${info.email}">email</span></p>
+            </li>
+        </ul>
+
+        <h3> Reservations:</h3>
+        <ul>
+            <li th:each="reservation : ${reservations}">
+                <span th:text="${reservation.reservationDate}">date</span>
+                <span th:text="${reservation.reserevationWeekDay}">day</span>
+                <span th:text="${reservation.reservedHour}">hour</span>
+            </li>
+        </ul>
+
+        <!-- Modal -->
+        <div id="MessageModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Don't do that please!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Ask your webdeveloper to figure out something else for these buttons.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

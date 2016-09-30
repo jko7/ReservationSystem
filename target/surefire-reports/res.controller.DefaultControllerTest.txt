@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: res.controller.DefaultControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.031 sec <<< FAILURE! - in res.controller.DefaultControllerTest
+testInit(res.controller.DefaultControllerTest)  Time elapsed: 0.031 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at res.controller.DefaultController.init(DefaultController.java:60)
+	at res.controller.DefaultControllerTest.testInit(DefaultControllerTest.java:61)
+
+testHandleDefault(res.controller.DefaultControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]> but was:<[redirect:/default]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at res.controller.DefaultControllerTest.testHandleDefault(DefaultControllerTest.java:49)
+

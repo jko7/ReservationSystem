@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- view for showing reservations before confirmation or cancellation -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Confirmation</title>
+
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron" style="background-color: #337AB7; color: white; text-align: center ">
+                <h1>Reservations</h1>
+                <p>Your reservations avaiting confirmation, <span th:text="${name}"></span></p>
+                <p>ACCEPT or CANCEL your reservations, please.</p>
+                <p>You'll get an confirmation e-mail.</p>
+                <div class="btn-group-horizontal">
+                    <a href="/reservation/cancel" class="btn btn-danger btn-lg">Cancel</a>
+                    <input type="button" class="btn btn-link btn-lg disabled"></input>
+                    <a href="/reservation/confirm" class="btn btn-success btn-lg">Accept</a>
+                </div>
+            </div>
+        </div>
+        <center>
+            <h3> Reservations:</h3>
+            <ul>
+                <li th:each="reservation : ${reservations}">
+                    <span th:text="${reservation.reservationDate}">date</span>
+                    <span th:text="${reservation.reserevationWeekDay}">day</span>
+                    <span th:text="${reservation.reservedHour}">hour</span>
+                </li>
+            </ul>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+-------------------------------------------------------------------------------
+Test set: res.controller.PageControllerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 4, Errors: 3, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in res.controller.PageControllerTest
+testReset(res.controller.PageControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]> but was:<[redirect:/default]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at res.controller.PageControllerTest.testReset(PageControllerTest.java:93)
+
+testDefaultPage(res.controller.PageControllerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at res.controller.PageController.defaultPage(PageController.java:49)
+	at res.controller.PageControllerTest.testDefaultPage(PageControllerTest.java:50)
+
+testPreviousPage(res.controller.PageControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]> but was:<[redirect:/default]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at res.controller.PageControllerTest.testPreviousPage(PageControllerTest.java:79)
+
+testPersonalInfo(res.controller.PageControllerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at res.controller.PageController.personalInfo(PageController.java:87)
+	at res.controller.PageControllerTest.testPersonalInfo(PageControllerTest.java:121)
+
+testGiveOffset(res.controller.PageControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at org.junit.Assert.fail(Assert.java:88)
+	at res.controller.PageControllerTest.testGiveOffset(PageControllerTest.java:109)
+
+testSendMail(res.controller.PageControllerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at res.controller.PageController.sendMail(PageController.java:96)
+	at res.controller.PageControllerTest.testSendMail(PageControllerTest.java:135)
+
+testNextPage(res.controller.PageControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]> but was:<[redirect:/default]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at res.controller.PageControllerTest.testNextPage(PageControllerTest.java:65)
+

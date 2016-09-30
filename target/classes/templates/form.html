@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<!-- form for new user's registration -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Registration</title>
+        <meta charset="UTF-8" />
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h1>Sign up for using The Reservation Service, please.</h1>
+
+        <form action="#" th:action="@{/registration}" th:object="${account}" method="POST">
+            <table>
+                <tr>
+                    <td>Name: </td>
+                    <td><input type="text" th:field="*{name}" /></td>
+                    <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error message</td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td><input type="text" th:field="*{email}" /></td>
+                    <td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email error message</td>
+                </tr>
+                <tr>
+                    <td>Username: </td>
+                    <td><input type="text" th:field="*{username}" /></td>
+                    <td th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username error message</td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type="password" th:field="*{password}" /></td>
+                    <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password error message</td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
